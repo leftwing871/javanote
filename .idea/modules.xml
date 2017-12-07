@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javanote.iml" filepath="$PROJECT_DIR$/.idea/modules/javanote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javanote_main.iml" filepath="$PROJECT_DIR$/.idea/modules/javanote_main.iml" group="javanote" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javanote_test.iml" filepath="$PROJECT_DIR$/.idea/modules/javanote_test.iml" group="javanote" />
+    </modules>
+  </component>
+</project>
