@@ -1,5 +1,8 @@
 package javaexample;
 
+import java.io.File;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -16,6 +19,46 @@ public class Lambda {
         list.forEach(s -> System.out.println(s + " | "));
 
         outer("AAAAAAA");
+
+        //39: 자체적인 함수형 인터페이스를 정의하기
+        TriFunction function = (a, b, c) -> a+b+c;
+
+        System.out.println(function.apply(1,10,20));
+
+        System.out.println("------------------");
+        File[] hiddenFiles = new File(".").listFiles(File::isHidden);
+        Arrays.asList(hiddenFiles).forEach(System.out::println);
+
+        System.out.println("------------------");
+
+
+
+
+
+//        DatabaseManager.execute((conn) -> {
+//            //...데이터베이스 처리...
+//        });
+    }
+
+//    public DatabaseManager {
+//        public static void execute(Consumer<Connection> consumer) throws SQLException {
+//            //연결을 함
+//            try(Connection conn = getConnection()) {
+//                //인수로 받은 함수형 인터페이스
+//                consumer.accept(conn);
+//
+//                conn.commit();
+//            } catch (Exception ex) {
+//                //예외가 발생하면 롤백
+//                conn.rollback();
+//                throw ex;
+//            }
+//        }
+//    }
+
+    @FunctionalInterface
+    public interface TriFunction {
+        public int apply(int a, int b, int c);
     }
 
     static void outer(final String msg) {
