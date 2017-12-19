@@ -15,6 +15,20 @@ public class Apple {
 
     int weight;
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    String color;
+
+    public Apple(int weight, String color) {
+        this.weight = weight;
+        this.color = color;
+    }
 
     @Override
     public String toString() {
